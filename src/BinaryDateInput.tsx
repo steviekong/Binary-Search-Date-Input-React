@@ -13,7 +13,7 @@ const BinarySearchDateInput: React.FC<props> = ({ onChange }) => {
   // Highest date possible in javascript
   const [high, setHigh] = useState(MAX_POSSIBLE_DATE);
   const calculateMid = (low: number, high: number) => {
-    return low + Math.floor((high - low) / 2);
+    return low + Math.floor((high - low) >> 1);
   };
   const [mid, setMid] = useState<number>(calculateMid(low, high));
 
